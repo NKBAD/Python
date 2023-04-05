@@ -28,6 +28,8 @@ cuenta1 = CuentaBancaria(0.5,10000)
 
 cuenta1.deposito(500).deposito(400).deposito(50).generar_interés().mostrar_info_cuenta() 
 
-print((10000 + 950))
-print((10000 + 950) * 0.5)
-print((10000 + 950) + (10000 + 950) * 0.5)
+class CuentaVitalicia(CuentaBancaria):
+    def __init__(self, tasa_interés, cuenta_ira, balance=0):
+        self.tasa_interés = tasa_interés
+        self.balance = balance
+        self.cuenta_ira = cuenta_ira 
